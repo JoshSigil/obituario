@@ -107,6 +107,14 @@ const QuestionnairePage = () => {
     individual: {
       reputation: [
         {
+          id: 'homecoming',
+          label: 'De onde você é? Você é nativo de Drakkenheim ou veio de outros Planos?'
+        },
+        {
+          id: 'custom',
+          label: 'Qual ritual ou tradição de sua cultura/religião você ainda mantém, mesmo longe de casa?'
+        },
+        {
           id: 'knownFeat',
           label: 'Por qual feito ou missão você é mais conhecido?'
         },
@@ -133,8 +141,8 @@ const QuestionnairePage = () => {
           label: 'Que lição você aprendeu da maneira mais difícil?'
         },
         {
-          id: 'lastGroup',
-          label: 'Quando foi a última vez que você trabalhou em grupo? Como terminou?'
+          id: 'lostone',
+          label: 'Há alguém que você tenha deixado para trás que ainda espera seu retorno?'
         },
         {
           id: 'contact',
@@ -188,7 +196,7 @@ const QuestionnairePage = () => {
     common: [
       {
         id: 'questionablePower',
-        label: 'Que poder ou habilidade você dominou que te faz questionar seu uso?'
+        label: 'Qual limite você estabeleceu para si mesmo que jurou nunca ultrapassar?'
       },
       {
         id: 'wrongInfo',
@@ -203,15 +211,15 @@ const QuestionnairePage = () => {
         label: 'Como você lida com as consequências imprevistas de suas ações?'
       },
       {
-        id: 'hibergarde',
-        label: 'Quais rumores você ouviu recentemente que você quer investigar?'
+        id: 'secreto',
+        label: 'Qual o seu maior segredo? Com quem que não está mais aqui você o compartilhou?'
       },
       {
         id: 'drakkenheim',
         label: 'O que você ouviu sobre Drakkenheim que lhe causa medo, curiosidade ou simpatia?'
       },
       {
-        id: 'aquilonia',
+        id: 'hibergarde',
         label: 'Qual sua opinião sobre a pacata Hibergarde e o que lhe interessa aqui?'
       },
       {
