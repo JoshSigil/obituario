@@ -402,15 +402,15 @@ const QuestionnairePage = () => {
       responses={responses}
       onChange={handleInputChange}
     />
+        {/* "Elementos Comuns" agora aparece apenas para Aventureiro Solitário */}
+      <QuestionSection 
+      title="Elementos Comuns"
+      questions={questions.common}
+      responses={responses}
+      onChange={handleInputChange}
+    />
   </>
 )}
-
-        <QuestionSection 
-          title="Elementos Comuns"
-          questions={questions.common}
-          responses={responses}
-          onChange={handleInputChange}
-        />
       </div>
       
       <style jsx global>{`
