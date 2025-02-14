@@ -140,7 +140,50 @@ const QuestionnairePage = () => {
           id: 'contact',
           label: 'Que contato ou aliado sempre tem informações úteis para você?'
         }
+      ],
+      shadowAndYou: [  // ⬅️ ADICIONAMOS ESTA NOVA SEÇÃO AQUI
+        {
+          id: "recurringNightmare",
+          label: "Que pesadelo recorrente faz você acordar suando frio, mesmo que não consiga se lembrar completamente dele?"
+        },
+        {
+          id: "questionSanity",
+          label: "Qual foi o evento inexplicável que te fez questionar sua própria sanidade pela primeira vez?"
+        },
+        {
+          id: "forbiddenKnowledge",
+          label: "Que conhecimento você possui que preferiria esquecer?"
+        },
+        {
+          id: "ominousProphecy",
+          label: "Qual foi a profecia ou presságio que você ouviu sobre si mesmo e teme que possa ser verdade?"
+        },
+        {
+          id: "ancientRitual",
+          label: "Que ritual ou prática antiga você testemunhou e desejaria não ter visto?"
+        },
+        {
+          id: "forgottenPromise",
+          label: "Que promessa antiga ainda te persegue, mesmo que você não se lembre de tê-la feito?"
+        },
+        {
+          id: "impossibleEncounter",
+          label: "Que pessoa do seu passado você tem certeza que viu recentemente, mesmo sabendo que isso seria impossível?"
+        },
+        {
+          id: "forbiddenDoors",
+          label: "Por que você tem certeza que algumas portas deveriam permanecer fechadas?"
+        },
+        {
+          id: "hiddenTruth",
+          label: "Que verdade você descobriu que ninguém mais parece perceber?"
+        },
+        {
+          id: "undeadGods",
+          label: "Por que você sabe que alguns deuses... não estão realmente mortos?"
+        }
       ]
+
     },
     common: [
       {
@@ -161,15 +204,15 @@ const QuestionnairePage = () => {
       },
       {
         id: 'hibergarde',
-        label: 'O que você ouviu sobre Hibergarde que te fez vir investigar?'
+        label: 'Quais rumores você ouviu recentemente que você quer investigar?'
       },
       {
         id: 'drakkenheim',
-        label: 'Como os eventos de Drakkenheim afetaram suas aventuras anteriores?'
+        label: 'O que você ouviu sobre Drakkenheim que lhe causa medo, curiosidade ou simpatia?'
       },
       {
         id: 'aquilonia',
-        label: 'Que rumores sobre a Rocha Aquilônia você considera dignos de investigação?'
+        label: 'Qual sua opinião sobre a pacata Hibergarde e o que lhe interessa aqui?'
       },
       {
         id: 'relevantKnowledge',
@@ -335,22 +378,32 @@ const QuestionnairePage = () => {
           </>
         )}
 
-        {formType === 'individual' && (
-          <>
-            <QuestionSection 
-              title="Reputação e Feitos"
-              questions={questions.individual.reputation}
-              responses={responses}
-              onChange={handleInputChange}
-            />
-            <QuestionSection 
-              title="Experiências Prévias"
-              questions={questions.individual.experiences}
-              responses={responses}
-              onChange={handleInputChange}
-            />
-          </>
-        )}
+{formType === 'individual' && (
+  <>
+    <QuestionSection 
+      title="Reputação e Feitos"
+      questions={questions.individual.reputation}
+      responses={responses}
+      onChange={handleInputChange}
+    />
+    <QuestionSection 
+      title="Experiências Prévias"
+      questions={questions.individual.experiences}
+      responses={responses}
+      onChange={handleInputChange}
+    />
+    {/* Agora o <p> está dentro do fragmento corretamente */}
+    <p className="italic text-amber-300/80 mt-4">
+      As perguntas a seguir podem parecer estranhas. Não existe resposta certa ou errada - apenas aquela que ressoa com a escuridão dentro do seu personagem.
+    </p>
+    <QuestionSection 
+      title="A Sombra e Você"
+      questions={questions.individual.shadowAndYou}
+      responses={responses}
+      onChange={handleInputChange}
+    />
+  </>
+)}
 
         <QuestionSection 
           title="Elementos Comuns"
